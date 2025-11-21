@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title> 
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <form id="url-box" method="POST" action="/url">
+
+        <label for="">Enter your link </label>
+        <input type="text" name="url" placeholder="https://demo.com">
+        <button type="submit">Generate</button>
+    </form>
+
+    <h1>Table</h1>
+
+    <table>
+        <thead>
+            <th>Serial</th>
+            <th>Short-URL</th>
+            <th>Original-URL</th>
+            <th>Clicks</th>
+        </thead>
+        <tbody>
+            <% urls.forEach((url,index) => { %>
+                <tr>
+                    <td><%= index+1 %></td>
+                    <td>http://localhost:8000/url/<%= url.shortId %></td>
+                    <td><%= url.redirectId %></td>
+                    <td><%= url.visitHistory.length %></td>
+                </tr>
+             
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
