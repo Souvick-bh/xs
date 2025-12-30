@@ -27,7 +27,7 @@
         <tbody>
             <% urls.forEach((url,index) => { %>
                 <tr>
-                    <td><a href="http://localhost:8000/url/<%= url.shortId %>">http://localhost:8000/url/<%= url.shortId %></a></td>
+                    <td><a href="https://xs-pink.vercel.app/<%= url.shortId %>">https://xs-pink.vercel.app/<%= url.shortId %></a></td>
                     <td><%= url.redirectId %></td>
                     <td id="clicks-count"><%= url.visitHistory.length %></td>
                 </tr>

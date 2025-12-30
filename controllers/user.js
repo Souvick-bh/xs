@@ -5,7 +5,7 @@ async function handleUserSignUp(req,res) {
     const currentUser = req.user._id;
 
     if(currentUser) {
-        return res.redirect("/url");
+        return res.redirect("/");
     }
 
     const {name,email,password} = req.body;
@@ -15,7 +15,7 @@ async function handleUserSignUp(req,res) {
          email,
          password
     });
-    return res.redirect("/url");
+    return res.redirect("/");
 
 }
 
@@ -27,7 +27,7 @@ async function handleUserLogin(req,res) {
     }
     const token = setUser(user);
     res.cookie("uid",token);
-    return res.redirect("/url");    
+    return res.redirect("/");    
 }
 
 
