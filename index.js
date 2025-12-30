@@ -13,7 +13,7 @@ const PORT = 8000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-connectDB("mongodb+srv://souvickb30_db_user:hCkG6vYyJyf2DGov@shortit.tx0ka4f.mongodb.net/").then(() => console.log("Connection done."));
+connectDB(process.env.MONGO_STRING).then(() => console.log("Connection done."));
 
 app.set("view engine", "ejs");
 app.set('views',path.resolve("./views"));
