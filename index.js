@@ -23,7 +23,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(cors());
 
-app.use('/',restriction,urlRouter);
+app.use('/url',restriction,urlRouter);
 
 app.use('/user', userRouter);
 

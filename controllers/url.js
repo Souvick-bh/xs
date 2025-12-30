@@ -13,7 +13,7 @@ async function handlegeneration(req,res) {
         createdBy: req.user._id,
         visitHistory: [],
     });
-    return res.redirect("/");
+    return res.redirect("/url");
 }
 
 async function handleanalytics(req,res) {
@@ -36,9 +36,6 @@ async function handleredirection (req,res) {
 
 async function handleAllShow(req,res) {
     const currentUser = req.user._id;
-    if (!currentUser) {
-        return res.redirect("/user/login");
-    }
     const allUrls = await URL.find({createdBy:currentUser});
     return res.render('home',{
         urls: allUrls,
