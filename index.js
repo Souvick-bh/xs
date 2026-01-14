@@ -25,7 +25,7 @@ app.use(cors());
 
 app.get("/",(req,res) => {res.redirect("/url")});
 
-app.use('/url',restriction,urlRouter);
+app.use('/url',urlRouter);
 
 app.use('/user', userRouter);
 
