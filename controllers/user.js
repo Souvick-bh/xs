@@ -2,7 +2,7 @@ const USER = require('../models/user');
 const {setUser} = require('../service/auth')
 
 async function handleUserSignUp(req,res) {
-    const currentUser = req.user._id;
+    const currentUser = req.user?._id;
 
     if(currentUser) {
         return res.redirect("/url");

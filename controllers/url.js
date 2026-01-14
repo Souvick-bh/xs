@@ -10,14 +10,14 @@ async function handlegeneration(req,res) {
     await URL.create({
         shortId: shortId,
         redirectId: body.url,
-        createdBy: req.user._id,
+        createdBy: req.user?._id,
         visitHistory: [],
     });
     return res.redirect("/url");
 }
 
 async function handleanalytics(req,res) {
-    const shortId = req.params.shortenedId;
+    const shortId = req.params?.shortenedId;
     const result = await URL.findOne({ shortId });
     return res.json({ totalClicks : result.visitHistory.length,
         analytics: result.visitHistory
@@ -25,7 +25,7 @@ async function handleanalytics(req,res) {
 }
 
 async function handleredirection (req,res) {
-    const shortId = req.params.shortenedId;
+    const shortId = req.params?.shortenedId;
     const entry = await URL.findOneAndUpdate({shortId},{$push: {
         visitHistory: {
             timestamp: Date.now()
@@ -35,7 +35,7 @@ async function handleredirection (req,res) {
 }
 
 async function handleAllShow(req,res) {
-    const currentUser = req.user._id;
+    const currentUser = req.user?._id;
     const allUrls = await URL.find({createdBy:currentUser});
     return res.render('home',{
         urls: allUrls,
