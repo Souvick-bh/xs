@@ -25,7 +25,7 @@ async function handleanalytics(req,res) {
 }
 
 async function handleredirection (req,res) {
-    const shortId = req.params?.shortenedId;
+    const shortId = req.params.shortenedId;
     const entry = await URL.findOneAndUpdate({shortId},{$push: {
         visitHistory: {
             timestamp: Date.now()
