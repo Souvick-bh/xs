@@ -1,6 +1,7 @@
 body {
     font-family: "Smooch Sans";
-    background-image: url(/assets/background/darkbird.jpg);
+    /* background-image: url(/assets/background/darkbird.jpg); */
+    background-color: #000000;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -13,8 +14,8 @@ body {
     width: 400px;
     margin: 40px auto 30px auto;
     padding: 25px 20px;
-    background: #e8e8e8;
-    background-image: url(/assets/background/foggy.jpg);
+    /* background: #e8e8e8; */
+    /* background-image: url(/assets/background/foggy.jpg); */
     background-size: cover;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
@@ -25,16 +26,37 @@ body {
 }
 
 #form-box label {
-    font-size: 26px;
-    font-weight: 600;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: xx-large;
     margin-bottom: 8px;
+}
+
+#signout {
+    position: absolute;
+    top: 36px;
+    left: 36px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 64px;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#signout:hover {
+    background-color: #b5b5b5;
 }
 
 input[type="email"], input[type="password"], input[type="name"] {
     padding: 6px 12px;
     border: 1px solid #bbb;
     outline: none;
-    border-radius: 4px;
+    border-radius: 64px;
     text-align: center;
     font-size: 16px;
     width: 360px;
@@ -42,20 +64,29 @@ input[type="email"], input[type="password"], input[type="name"] {
 }
 
 button[type="submit"] {
-    padding: 10px;
-    background: #ababab;
-    color: #fff;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 64px;
     font-weight: bold;
-    text-shadow: 2px 2px 2px black;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    font-size: medium;
+    border: 0;
     cursor: pointer;
     transition: background 0.2s;
 }
 
 button[type="submit"]:hover {
-    background: #7d7d7d;
+    background-color: #b5b5b5;
+}
+
+.pagechange {
+    color: #8BAE66;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: medium;
 }
 
 h1 {
@@ -72,17 +103,17 @@ table {
     margin-top: 72px;
     border-collapse: collapse;
     background: #fff;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     box-shadow: 0 2px 8px rgba(0,0,0,0.10);
     overflow: hidden;
 }
 
 th {
-    background: #7d7d7d;
+    background: #000000;
     color: #fff;
     font-weight: 600;
     font-size: 18px;
-    text-shadow: 2px 2px 2px black;
+    /* text-shadow: 2px 2px 2px black; */
     padding: 8px 16px;
     text-align: center;
     width: fit-content;
