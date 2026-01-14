@@ -23,6 +23,8 @@ app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(cors());
 
+app.get("/",(req,res) => {res.redirect("/url")});
+
 app.use('/url',restriction,urlRouter);
 
 app.use('/user', userRouter);
