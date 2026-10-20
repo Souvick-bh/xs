@@ -1,142 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: "Smooch Sans";
-    /* background-image: url(/assets/background/darkbird.jpg); */
-    background-color: #000000;
-    background-size: cover;
-    background-repeat: no-repeat;
+    margin: 0;
     min-height: 100vh;
+    background: #eee7d8;
+    color: #171717;
+    font-family: "Space Grotesk", sans-serif;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+/* Login / Signup */
+
 #form-box {
-    width: 400px;
-    margin: 40px auto 30px auto;
-    padding: 25px 20px;
-    /* background: #e8e8e8; */
-    /* background-image: url(/assets/background/foggy.jpg); */
-    background-size: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    width: 420px;
+    margin: auto;
+    padding: 40px;
+
+    background: #faf7ef;
+    border: 3px solid #171717;
+
+    box-shadow: 8px 8px 0 #171717;
+
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    align-items: center;
+    gap: 16px;
+
+    transform: rotate(-1deg);
 }
+
 
 #form-box label {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: xx-large;
-    margin-bottom: 8px;
-}
-
-#signout {
-    position: absolute;
-    top: 36px;
-    left: 36px;
+    font-family: "Instrument Serif", serif;
+    font-size: 48px;
+    font-style: italic;
 }
 
 
-input[type="email"], input[type="password"], input[type="name"] {
-    padding: 6px 12px;
-    border: 1px solid #bbb;
-    outline: none;
-    border-radius: 64px;
-    text-align: center;
+input {
+    width: 100%;
+    padding: 14px;
+
+    background: transparent;
+
+    border: none;
+    border-bottom: 2px solid #171717;
+
     font-size: 16px;
-    width: 360px;
-    margin-bottom: 10px;
+    font-family: inherit;
+
+    outline: none;
 }
 
-button[type="submit"] {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 12px;
-    padding-right: 12px;
-    width: fit-content;
-    height: fit-content;
-    border-radius: 64px;
+
+input:focus {
+    background: #fff4bd;
+}
+
+
+button {
+    margin-top: 10px;
+
+    padding: 12px 25px;
+
+    background: #171717;
+    color: white;
+
+    border: 2px solid #171717;
+
     font-weight: bold;
-    font-size: medium;
-    border: 0;
     cursor: pointer;
-    transition: background 0.2s;
+
+    transition: .2s;
 }
 
-button[type="submit"]:hover {
-    background-color: #b5b5b5;
+
+button:hover {
+    background: #d85d32;
+    transform: translate(-3px,-3px);
+    box-shadow: 5px 5px 0 #171717;
 }
+
 
 .pagechange {
-    color: #8BAE66;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: medium;
+    color:#49734a;
+    text-decoration: underline;
+    font-weight:bold;
 }
 
-h1 {
-    text-align: center;
-    color: #333;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 2rem;
+
+/* Home */
+
+#signout {
+    position:absolute;
+    top:30px;
+    left:30px;
 }
+
+
+#form-box input {
+    border-radius:0;
+}
+
 
 table {
-    width: 80%;
-    margin: 0 auto 0px auto;
-    margin-top: 72px;
-    border-collapse: collapse;
-    background: #fff;
-    /* border-radius: 8px; */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-    overflow: hidden;
+
+    width:85%;
+    margin:70px auto;
+
+    border-collapse:collapse;
+
+    background:#faf7ef;
+
+    border:3px solid #171717;
+
+    box-shadow:10px 10px 0 #171717;
 }
+
 
 th {
-    background: #000000;
-    color: #fff;
-    font-weight: 600;
-    font-size: 18px;
-    /* text-shadow: 2px 2px 2px black; */
-    padding: 8px 16px;
-    text-align: center;
-    width: fit-content;
+
+    background:#171717;
+    color:#faf7ef;
+
+    padding:16px;
+
+    font-size:18px;
 }
+
 
 td {
-    font-size: 16px;
-    padding: 8px 16px;
-    text-align: center;
-    width: fit-content;
+
+    padding:15px;
+
+    border-bottom:1px solid #aaa;
+
+    text-align:center;
+
 }
 
-a {
-    font-weight: bold;
-    color:#000000;
-    text-decoration: none;
-}
-
-#clicks-count {
-    font-weight: bold;
-    color: #000000;
-}
-
-tr:nth-child(even) {
-    background: #f2f2f2;
-}
 
 tr:hover {
-    background: #e6f0ff;
+
+    background:#fff4bd;
+
 }
 
+
+a {
+
+    color:#171717;
+
+    font-weight:bold;
+
+}
+
+
+#clicks-count {
+
+    font-size:20px;
+
+}
+
+
 #webname {
-    position: absolute;
-    top: 24px;
-    right: 64px;
-    font-size: 72px;
-    font-weight: bolder;
-    text-shadow: 2px 2px 2px white;
+
+    position:absolute;
+
+    top:30px;
+    right:50px;
+
+    font-family:"Instrument Serif";
+
+    font-size:80px;
+
+    transform:rotate(5deg);
+
 }
